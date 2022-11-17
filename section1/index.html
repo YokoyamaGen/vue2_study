@@ -9,10 +9,8 @@
 </head>
 <body>
   <div id="app">
-    {{ message }}
-    <!-- <a href="{{ google }}">googleへのリンク</a> -->
-    <!-- <a v-bind:href="google">googleへのリンク</a> -->
-    <a :href="google">googleへのリンク</a>
+    <div v-show="isDisplay">表示</div>
+    <div v-show="!isDisplay">falseになっております</div>
   </div>
 
   <script>
@@ -20,8 +18,7 @@
       el: '#app',
       data(){
         return {
-          message: 'Hello Vue!',
-          google: 'https://google.com'
+          isDisplay: true
         }
       }
     })
